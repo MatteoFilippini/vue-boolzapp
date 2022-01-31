@@ -24,17 +24,17 @@
         <div class="container">
             <div class="row">
                 <!-- MENU -->
-                <div class="col-4 bg-primary menu r">
+                <div class="col-4 menu r">
                     <!-- user-menu -->
-                    <section id="user-menu">
+                    <section id="user-menu" class="bgc p-2">
                         <div class="container">
                             <div class="row">
-                                <div class="col border border-danger section-layout h-standard justify-content-between">
-                                    <div class="user border border-danger">
+                                <div class="col section-layout h-standard justify-content-between">
+                                    <div class="user">
                                         <img src="img/avatar_io.jpg" alt="user_io" class="user-image">
                                         <h6>Nome utente</h6>
                                     </div>
-                                    <div class="icons color-gray border border-danger">
+                                    <div class="icons color-gray">
                                         <i class="fas fa-circle-notch me-2"></i>
                                         <i class="fas fa-comment-alt me-2"></i>
                                         <i class="fas fa-ellipsis-v"></i>
@@ -43,16 +43,16 @@
                             </div>
                         </div>
                     </section>
-                    <section id="notifications">
+                    <section id="notifications" class="bg-info p-2 text-dark bg-opacity-25">
                         <div class="container">
                             <div class="row">
-                                <div class="col border border-light section-layout">
+                                <div class="col section-layout">
                                     <div class="image">
                                         <div class="notification-image">
                                             <i class="far fa-bell fa-2x"></i>
                                         </div>
                                     </div>
-                                    <div class="border border-light ms-1">
+                                    <div class="ms-1">
                                         <h6>Ricevi notifiche di nuovi messaggi</h6>
                                         <p class="text-muted mb-1">
                                             <a href="#" class="text-reset">Attiva notifiche desktop</a>.
@@ -65,17 +65,19 @@
                     <section id="search">
                         <div class="container">
                             <div class="row">
-                                <div class="col border border-success text-muted">
-                                    <i class="fas fa-search"></i>
-                                    <span>Cerca o inizia una nuova chat</span>
+                                <div class="col">
+                                    <div class="search-area text-muted p-2">
+                                        <i class="fas fa-search"></i>
+                                        <span>Cerca o inizia una nuova chat</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section id="contacts" class="overflow-auto">
+                    <section id="contacts" class="overflow-scroll">
                         <div class="container">
-                            <div class="row">
-                                <div class="col h-standard border border border-dark section-layout">
+                            <div class="row bgc">
+                                <div class="col h-standard section-layout">
                                     <div class="contact d-flex">
                                         <img src="img/avatar_1.jpg" alt="avatar_1" class="user-image">
                                         <h6 class="align-self-start ms-3">Michele </h6>
@@ -83,63 +85,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col h-standard border border border-dark section-layout">
-                                    <div class="contact d-flex">
-                                        <img src="img/avatar_1.jpg" alt="avatar_1" class="user-image">
-                                        <h6 class="align-self-start ms-3">Michele </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col h-standard border border border-dark section-layout">
-                                    <div class="contact d-flex">
-                                        <img src="img/avatar_1.jpg" alt="avatar_1" class="user-image">
-                                        <h6 class="align-self-start ms-3">Michele </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col h-standard border border border-dark section-layout">
-                                    <div class="contact d-flex">
-                                        <img src="img/avatar_1.jpg" alt="avatar_1" class="user-image">
-                                        <h6 class="align-self-start ms-3">Michele </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col h-standard border border border-dark section-layout">
-                                    <div class="contact d-flex">
-                                        <img src="img/avatar_1.jpg" alt="avatar_1" class="user-image">
-                                        <h6 class="align-self-start ms-3">Michele </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col h-standard border border border-dark section-layout">
-                                    <div class="contact d-flex">
-                                        <img src="img/avatar_1.jpg" alt="avatar_1" class="user-image">
-                                        <h6 class="align-self-start ms-3">Michele </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col h-standard border border border-dark section-layout">
-                                    <div class="contact d-flex">
-                                        <img src="img/avatar_1.jpg" alt="avatar_1" class="user-image">
-                                        <h6 class="align-self-start ms-3">Michele </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col h-standard border border border-dark section-layout">
-                                    <div class="contact d-flex">
-                                        <img src="img/avatar_1.jpg" alt="avatar_1" class="user-image">
-                                        <h6 class="align-self-start ms-3">Michele </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col h-standard border border border-dark section-layout">
+                                <div class="col h-standard section-layout">
                                     <div class="contact d-flex">
                                         <img src="img/avatar_1.jpg" alt="avatar_1" class="user-image">
                                         <h6 class="align-self-start ms-3">Michele </h6>
@@ -150,22 +96,21 @@
                     </section>
                 </div>
                 <!-- CHAT -->
-                <div class="col-8 bg-danger chat r">
-                    <section id="other-user-menu">
+                <div class="col-8 chat r">
+                    <section id="other-user-menu" class="bgc p-2">
                         <div class="container">
                             <div class="row">
-                                <div
-                                    class="col border border-success section-layout h-standard justify-content-between">
-                                    <div class="col border border-light section-layout">
+                                <div class="col section-layout h-standard justify-content-between">
+                                    <div class="col section-layout">
                                         <img src="img/avatar_1.jpg" alt="" class="user-image">
-                                        <div class="border border-light ms-1">
+                                        <div class=" ms-1">
                                             <h6>Michele</h6>
                                             <p class="text-muted mb-1">
-                                                <a href="#" class="text-reset">ultimo accesso alle</a>.
+                                                ultimo accesso alle
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="icons color-gray border border-success">
+                                    <div class="icons color-gray">
                                         <i class="fas fa-search me-2"></i>
                                         <i class="fas fa-comment-alt me-2"></i>
                                         <i class="fas fa-ellipsis-v"></i>
@@ -174,11 +119,11 @@
                             </div>
                         </div>
                     </section>
-                    <section id="chats">
+                    <section id="chats" class="overflow-auto">
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <div class="messages overflow-auto">
+                                    <div class="messages">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laborum
                                         pariatur error ipsa eligendi cupiditate! Quaerat, laborum quibusdam, eos quia
                                         sit id sint illum est at dignissimos consectetur! Sit, ipsam!
@@ -200,12 +145,12 @@
                             </div>
                         </div>
                     </section>
-                    <section id="text-menu">
+                    <section id="text-menu" class="bgc">
                         <div class="container">
                             <div class="row">
-                                <div class="col border border-light h-standard section-layout">
+                                <div class="col h-standard section-layout">
                                     <i class="far fa-smile"></i>
-                                    <div class="text">
+                                    <div class="text bg-light">
                                         scrivi qualcosa
                                     </div>
                                     <i class="fas fa-microphone"></i>
