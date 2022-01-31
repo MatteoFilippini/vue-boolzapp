@@ -10,3 +10,7 @@ main{
     height: calc(100vh - 100px);
 }
 
+.h-standard{
+    height: 50px;
+}
+
