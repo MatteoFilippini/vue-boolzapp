@@ -1,13 +1,12 @@
 body{
     background-color: lightgrey;
+    height: 100vh;
 }
 
-main{
-    margin: 50px 0;
-}
 
-.menu{
+.r{
     height: calc(100vh - 100px);
+    margin: 50px 0;
 }
 
 /* altezza della sezione */
@@ -45,5 +44,8 @@ h6{
     justify-content: center;
 }
 
-
+/* CONTATTI */
+ #contacts{
+     height: 80%;
+} 
 
