@@ -49,3 +49,14 @@ h6{
      height: 80%;
 } 
 
+
+/* MESSAGGIO */
+
+
+.text{
+    width: 100%;
+    margin: 5px 10px;
+    border: 1px dashed black;
+    height: 40px;
+}
+
