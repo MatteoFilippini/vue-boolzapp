@@ -30,6 +30,11 @@ h6{
     display: inline;
 }
 
+.color-gray{
+    color: gray;
+}
+
+/* icona notifiche */
 .notification-image{
     border-radius: 50%;
     height: 40px; 
