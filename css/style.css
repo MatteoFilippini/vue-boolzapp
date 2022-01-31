@@ -14,3 +14,8 @@ main{
     height: 50px;
 }
 
+.user-image{
+   border-radius: 50%;
+   height: 40px; 
+}
+
