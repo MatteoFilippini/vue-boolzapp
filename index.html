@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <main>
+    <div id="root">
         <div class="container">
             <div class="row">
                 <!-- MENU -->
@@ -76,7 +76,19 @@
                     </section>
                     <section id="contacts" class="overflow-scroll">
                         <div class="container">
-                            <div class="row bgc">
+
+                            <div class="row" v-for='(contact,index) in contacts'>
+                                <div class="col h-standard section-layout">
+                                    <div class="contact d-flex">
+                                        <img :src="`img/avatar${contact.avatar}.jpg`" :alt="`avatar ${contact.avatar}`"
+                                            class="user-image">
+                                        <h6 class="align-self-start ms-3">{{contact.name}}</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- <div class="row bgc">
                                 <div class="col h-standard section-layout">
                                     <div class="contact d-flex">
                                         <img src="img/avatar_1.jpg" alt="avatar_1" class="user-image">
@@ -91,7 +103,10 @@
                                         <h6 class="align-self-start ms-3">Michele </h6>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+
+
+
                         </div>
                     </section>
                 </div>
@@ -161,7 +176,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 
 
     <script src="js/script.js"></script>
