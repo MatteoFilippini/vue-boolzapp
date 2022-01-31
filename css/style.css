@@ -58,13 +58,9 @@ h6{
      height: 80%;
 } 
 
-.messages{
-    height: calc(100vh - 200px);
-    padding: 10px 0;
-}
 
 
-/* MESSAGGIO */
+/* MESSAGGIO DA INVIARE*/
 .text{
     width: 100%;
     margin: 5px 10px;
@@ -76,4 +72,22 @@ h6{
 
 #chats{
     background-image: url(../img/mine.jpg);
+    height: calc(100vh - 200px);;
+}
+
+
+.message{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(90, 240, 90, 0.959);
+    padding: 10px 5px;
+    margin: 10px 0;
+}
+.my.message{
+    background-color: rgba(90, 240, 90, 0.959);
+}
+
+.other.message{
+    background-color: #fff;
 }
