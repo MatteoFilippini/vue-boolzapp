@@ -10,12 +10,25 @@ main{
     height: calc(100vh - 100px);
 }
 
+/* altezza della sezione */
 .h-standard{
     height: 50px;
 }
 
+/* immagine profilo */
 .user-image{
    border-radius: 50%;
    height: 40px; 
 }
+
+.section-layout{
+    display: flex;
+    align-items: center;
+}
+
+h6{
+    display: inline;
+}
+
+
 
