@@ -101,6 +101,10 @@ const root = new Vue({
         // VEDO SE HO INVIATO IL MESSAGGIO
         isSent(indexMes) {
             return this.contacts[this.currentContact].messages[indexMes].status === 'received';
+        },
+        // INVIO DI UN MESSAGGIO
+        sentMessage() {
+            console.log('inviato');
         }
     }
 })

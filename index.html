@@ -105,7 +105,8 @@
                     </section>
                     <section class="input-message d-flex justify-content-between flex-shrink-1 image p-2 c">
                         <i class="far fa-smile" role="button"></i>
-                        <input type="text" class="w-100 m-2 p-1">
+                        <input type="text" class="w-100 m-2 p-1" placeholder="Scrivi qui..."
+                            @keyup.enter="sentMessage()">
                         <i class="fas fa-microphone" role="button"></i>
                     </section>
                 </div>
