@@ -16,7 +16,7 @@ main{
 }
 
 .c{
-    background-color: lightgray;
+    background-color: rgb(240,242,245);
 }
 
 /* MENU SECTION */
@@ -39,6 +39,11 @@ main{
 .user-image{
     border-radius: 50%;
     height: 40px; 
+}
+
+/* notification */
+.bg-color-notif{
+    background-color: rgb(83,189,235);
 }
 
 
