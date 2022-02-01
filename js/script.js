@@ -100,7 +100,7 @@ const root = new Vue({
         },
 
         isReceived(indexMes) {
-            return this.contacts[this.currentContact].messages[indexMes].status === 'received';
+            return this.contacts[this.currentContact].messages[indexMes].status === 'sent';
         }
     }
 })
