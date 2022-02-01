@@ -25,8 +25,8 @@
             <div class="row h-100">
                 <!-- MENU -->
                 <div class="col-4 menu d-flex flex-column p-0">
-                    <section class="user-menu p-2">
-                        <div class="image ">
+                    <section class="user-menu p-2 justify-content-between flex-shrink-1">
+                        <div class="image">
                             <figure class="m-0">
                                 <img src="img/avatar_io.jpg" alt="user_io" class="user-image">
                             </figure>
@@ -40,7 +40,7 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </section>
-                    <section class="notifications p-2 user-menu bg-primary">
+                    <section class="notifications p-2 user-menu bg-primary flex-shrink-1">
                         <div class="image">
                             <figure class="m-0 rounded-circle bg-light d-flex align-items-center p-2">
                                 <i class="far fa-bell-slash"></i>
@@ -50,6 +50,18 @@
                                 <p class="text-muted mb-1">
                                     <a href="#" class="text-reset">Attiva notifiche desktop</a>.
                                 </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="search flex-shrink-1"></section>
+
+                    <section class="user-menu flex-grow-1 flex-column align-items-start p-2 overflow-auto">
+                        <div class="image" v-for='(contact,index) in contacts'>
+                            <figure class="m-0">
+                                <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" class="user-image">
+                            </figure>
+                            <div class="h6 mb-0 ms-3 align-self-start mt-2">
+                                {{contact.name}}
                             </div>
                         </div>
                     </section>

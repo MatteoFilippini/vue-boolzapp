@@ -18,9 +18,7 @@ main{
 /* MENU SECTION */
 .user-menu{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: lightgray;
 }
 
 .image{
