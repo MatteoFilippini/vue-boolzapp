@@ -19,6 +19,10 @@ main{
     background-color: rgb(240,242,245);
 }
 
+.color-icons{
+    color: rgb(84,101,111);
+}
+
 /* MENU SECTION */
 .user-menu{
     display: flex;
