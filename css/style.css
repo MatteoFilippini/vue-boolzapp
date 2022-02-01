@@ -15,6 +15,10 @@ main{
     height: 100%;
 }
 
+.c{
+    background-color: lightgray;
+}
+
 /* MENU SECTION */
 .user-menu{
     display: flex;
@@ -31,8 +35,13 @@ main{
 .user-image{
     border-radius: 50%;
     height: 40px; 
+}
+
+
+/* CHAT */
+ .chat{
+    background-image: url(../img/mine.jpg);   
  }
- 
 
 
 
