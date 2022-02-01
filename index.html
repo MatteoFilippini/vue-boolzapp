@@ -78,10 +78,11 @@
                     <section class="user-menu p-2 justify-content-between flex-shrink-1 c">
                         <div class="image">
                             <figure class="m-0">
-                                <img src="" alt="-------" class="user-image">
+                                <img :src="`img/avatar${contacts[currentContact].avatar}.jpg`"
+                                    :alt="contacts[currentContact].avatar" class="user-image">
                             </figure>
                             <div class="h6 mb-0 ms-2">
-                                ------
+                                {{contacts[currentContact].name}}
                                 <p class="text-muted mb-1"><small>Ultimo access oggi alle</small></p>
                             </div>
                         </div>
