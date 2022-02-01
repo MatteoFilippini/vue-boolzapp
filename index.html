@@ -63,7 +63,7 @@
                             </div>
                     </section>
                     <section class="user-menu flex-grow-1 flex-column align-items-start p-2 overflow-auto">
-                        <div class="image w-100" v-for='(contact,index) in contacts' @click=currentChat(index)>
+                        <div class="image w-100 contatto" v-for='(contact,index) in contacts' @click=currentChat(index)>
                             <figure class="m-0">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" class="user-image">
                             </figure>
