@@ -43,69 +43,31 @@ main{
     background-image: url(../img/mine.jpg);   
  }
 
-
-
-
-
-.section-layout{
-    display: flex;
-    align-items: center;
+.message-container{
+    align-items: flex-start;
 }
-
-h6{
-    display: inline;
-}
-
-.color-gray{
-    color: gray;
-}
-
-/* icona notifiche */
-.notification-image{
-    border-radius: 50%;
-    height: 40px; 
-    width: 40px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* CONTATTI */
- #contacts{
-     height: 80%;
-} 
-
-
-
-/* MESSAGGIO DA INVIARE*/
-.text{
-    width: 100%;
-    margin: 5px 10px;
-    height: 40px;
-    border-radius: 7px;
-    padding: 5px;
-}
-
-
-#chats{
-    background-image: url(../img/mine.jpg);
-    height: calc(100vh - 200px);;
-}
-
 
 .message{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     border-radius: 5px;
-    background-color: rgba(90, 240, 90, 0.959);
-    padding: 10px 5px;
     margin: 10px 0;
-}
-.my.message{
-    background-color: rgba(90, 240, 90, 0.959);
+    max-width: 200px;
+    padding: 0 10px;
 }
 
-.other.message{
-    background-color: #fff;
+.message small{
+    display: flex;
+    justify-content: flex-end;
 }
+
+.message.receive{
+    background-color: rgba(90, 240, 90, 0.959);
+    align-self: flex-end;
+}
+
+.message-container .message.sent{
+    background-color: white;   
+}
+
+
