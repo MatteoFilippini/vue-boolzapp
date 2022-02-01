@@ -1,6 +1,7 @@
 const root = new Vue({
     el: '#root',
     data: {
+        currentContact: 0,
         user: {
             name: 'Matteo Filippni',
             avatar: '_io'
@@ -90,5 +91,12 @@ const root = new Vue({
                 ],
             },
         ],
+    },
+    methods: {
+        // PRENDO IL SINGOLO CONTATTO
+        currentChat(index) {
+            this.currentContact = index;
+            console.log(this.currentContact)
+        }
     }
 })
