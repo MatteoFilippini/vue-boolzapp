@@ -46,6 +46,10 @@ main{
     background-color: rgb(83,189,235);
 }
 
+.color-notif{
+    color: rgb(83,189,235);
+}
+
 
 /* CHAT */
  .chat{
