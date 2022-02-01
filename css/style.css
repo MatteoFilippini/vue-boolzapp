@@ -31,6 +31,10 @@ main{
     height: 60px;
 }
 
+.image:hover{
+    background-color: lightgray;
+}
+
 /* immagine profilo */
 .user-image{
     border-radius: 50%;
