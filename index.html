@@ -94,7 +94,7 @@
                     </section>
                     <section class="d-flex flex-column flex-grow-1 overflow-auto p-3 message-container">
                         <div class="message" v-for='(message,indexMes) in contacts[currentContact].messages'
-                            :class="{sent: isReceived(indexMes)}">
+                            :class="{sent: isSent(indexMes)}">
                             <p class="text-message m-0">
                                 {{message.text}}
                             </p>

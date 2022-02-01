@@ -98,9 +98,9 @@ const root = new Vue({
         currentChat(index) {
             this.currentContact = index;
         },
-
-        isReceived(indexMes) {
-            return this.contacts[this.currentContact].messages[indexMes].status === 'sent';
+        // VEDO SE HO INVIATO IL MESSAGGIO
+        isSent(indexMes) {
+            return this.contacts[this.currentContact].messages[indexMes].status === 'received';
         }
     }
 })
