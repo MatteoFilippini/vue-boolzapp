@@ -93,20 +93,13 @@
                         </div>
                     </section>
                     <section class="d-flex flex-column flex-grow-1 overflow-auto p-3 message-container">
-                        <div class="message sent">
+                        <div class="message" v-for='(message,indexMes) in contacts[currentContact].messages'
+                            :class="{received: isReceived(indexMes)}">
                             <p class="text-message m-0">
-                                lorem
+                                {{message.text}}
                             </p>
                             <time class="text-muted">
-                                <small>10/01/2020 16:15.22</small>
-                            </time>
-                        </div>
-                        <div class="message receive">
-                            <p class="text-message m-0">
-                                lorem
-                            </p>
-                            <time class="text-muted">
-                                <small>10/01/2020 16:15.22</small>
+                                <small>{{message.date}}</small>
                             </time>
                         </div>
                     </section>

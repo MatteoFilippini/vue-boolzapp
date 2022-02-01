@@ -91,12 +91,16 @@ const root = new Vue({
                 ],
             },
         ],
+
     },
     methods: {
         // PRENDO IL SINGOLO CONTATTO
         currentChat(index) {
             this.currentContact = index;
-            console.log(this.currentContact)
+        },
+
+        isReceived(indexMes) {
+            return this.contacts[this.currentContact].messages[indexMes].status === 'received';
         }
     }
 })

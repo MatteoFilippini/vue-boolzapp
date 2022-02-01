@@ -58,6 +58,7 @@ main{
     margin: 10px 0;
     max-width: 200px;
     padding: 0 10px;
+    background-color: white;  
 }
 
 .message small{
@@ -65,13 +66,10 @@ main{
     justify-content: flex-end;
 }
 
-.message.receive{
+.received{
     background-color: rgba(90, 240, 90, 0.959);
     align-self: flex-end;
 }
 
-.message-container .message.sent{
-    background-color: white;   
-}
 
 
