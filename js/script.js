@@ -125,10 +125,9 @@ const root = new Vue({
         },
         // CERCA CONTATTTO
         search() {
-            if (!this.searchText) return;
-            console.log(this.searchText);
             const result = this.contacts.filter((contact) => {
-                if (contact.name.includes(this.searchText)) {
+                const lowerName = contact.name.toLowerCase();
+                if (lowerName.includes(this.searchText)) {
                     return contact.visible = true;
                 } else {
                     return contact.visible = false;
