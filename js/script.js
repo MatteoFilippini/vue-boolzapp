@@ -2,6 +2,12 @@ const root = new Vue({
     el: '#root',
     data: {
         currentContact: 0,
+        textMessage: '',
+        newMessage: {
+            date: '99/99/9999 99:99:99',
+            text: ' ',
+            status: 'received'
+        },
         user: {
             name: 'Matteo Filippni',
             avatar: '_io'
@@ -91,7 +97,6 @@ const root = new Vue({
                 ],
             },
         ],
-
     },
     methods: {
         // PRENDO IL SINGOLO CONTATTO
@@ -104,7 +109,12 @@ const root = new Vue({
         },
         // INVIO DI UN MESSAGGIO
         sentMessage() {
-            console.log('inviato');
+            this.newMessage.text = this.textMessage;
+            this.contacts[this.currentContact].messages.push(this.newMessage);
+            this.textMessage = ''
         }
     }
 })
+
+
+

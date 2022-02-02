@@ -70,6 +70,7 @@ main{
     border-radius: 5px;
     margin: 10px 0;
     max-width: 40%;
+    height: auto;
     padding: 0 10px;
     background-color: white;  
 }
@@ -82,6 +83,11 @@ main{
 .sent{
     background-color: rgb(217,253,211);
     align-self: flex-end;
+}
+
+
+.active{
+    background-color: lightgray;
 }
 
 
