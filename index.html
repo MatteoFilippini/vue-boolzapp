@@ -62,7 +62,8 @@
                                 <i class="fas fa-search"></i>
                             </figure>
                             <div class="mb-0 ms-2 w-100">
-                                <input type="text" placeholder="Cerca o inizia una nuova chat" class="w-100">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat" class="w-100"
+                                    @keyup.enter="search" v-model='searchText'>
                             </div>
                     </section>
                     <section class="user-menu flex-grow-1 flex-column align-items-start p-0 overflow-auto">

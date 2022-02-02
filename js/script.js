@@ -5,6 +5,7 @@ const root = new Vue({
     data: {
         currentContact: 0,
         textMessage: '',
+        searchText: '',
         user: {
             name: 'Matteo Filippni',
             avatar: '_io'
@@ -109,19 +110,24 @@ const root = new Vue({
             if (!this.textMessage) return;
             this.addMessage(this.textMessage, 'received');
             this.textMessage = ''
-            setTimeout(function () {
-
+            setTimeout(() => {
+                this.addMessage('ok', 'sent')
             }, 3000)
         },
-
+        // CREAZIONE NUOVO MESSAGGIO
         addMessage(text, status) {
             const newMessage = {
                 date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
-                // date: '9',
                 text,
                 status
             };
             this.contacts[this.currentContact].messages.push(newMessage);
+        },
+        // CERCA CONTATTTO
+        search() {
+            if (!this.searchText) return;
+            console.log(this.searchText);
+            this.searchText = '';
         }
     }
 })
