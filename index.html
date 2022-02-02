@@ -63,12 +63,12 @@
                             </figure>
                             <div class="mb-0 ms-2 w-100">
                                 <input type="text" placeholder="Cerca o inizia una nuova chat" class="w-100"
-                                    @keyup.enter="search" v-model='searchText'>
+                                    @keyup="search()" v-model='searchText'>
                             </div>
                     </section>
                     <section class="user-menu flex-grow-1 flex-column align-items-start p-0 overflow-auto">
-                        <div class="image w-100 contatto p-2 false" v-for='(contact,index) in contacts'
-                            @click=currentChat(index) :class="{active: index===currentContact}">
+                        <div class="image w-100 contatto p-2" v-for='(contact,index) in contacts'
+                            @click=currentChat(index) :class="{false: contacts[index].visible===false}">
                             <figure class="m-0">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" class="user-image">
                             </figure>

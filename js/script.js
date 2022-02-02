@@ -127,10 +127,18 @@ const root = new Vue({
         search() {
             if (!this.searchText) return;
             console.log(this.searchText);
-            this.searchText = '';
+            const result = this.contacts.filter((contact) => {
+                if (contact.name.includes(this.searchText)) {
+                    return contact.visible = true;
+                } else {
+                    return contact.visible = false;
+                }
+            });
+            return result;
         }
     }
 })
 
 
 
+// :class="{active: index===currentContact}"
