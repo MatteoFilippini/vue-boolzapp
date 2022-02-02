@@ -62,9 +62,9 @@
                                 <input type="text" placeholder="Cerca o inizia una nuova chat" class="w-100">
                             </div>
                     </section>
-                    <section class="user-menu flex-grow-1 flex-column align-items-start p-2 overflow-auto">
-                        <div class="image w-100 contatto" v-for='(contact,index) in contacts' @click=currentChat(index)
-                            :class="{active: index===currentContact}">
+                    <section class="user-menu flex-grow-1 flex-column align-items-start p-0 overflow-auto">
+                        <div class="image w-100 contatto p-2" v-for='(contact,index) in contacts'
+                            @click=currentChat(index) :class="{active: index===currentContact}">
                             <figure class="m-0">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" class="user-image">
                             </figure>
@@ -104,10 +104,10 @@
                             </time>
                         </div>
                     </section>
-                    <section class="input-message d-flex justify-content-between flex-shrink-1 image p-2 c">
-                        <i class="far fa-smile" role="button"></i>
-                        <input type="text" class="w-100 m-2 p-1" @keyup.enter="sentMessage()" v-model='textMessage'>
-                        <i class="fas fa-microphone" role="button"></i>
+                    <section class="p-3 input-message d-flex justify-content-between flex-shrink-1 image p-2 c">
+                        <i class="far fa-smile fa-2x" role="button"></i>
+                        <input type="text" class="w-100 m-2 p-1" @keyup.enter="sendMessage" v-model.trim='textMessage'>
+                        <i class="fas fa-microphone fa-2x" role="button"></i>
                     </section>
                 </div>
             </div>

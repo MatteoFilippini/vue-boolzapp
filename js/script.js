@@ -3,11 +3,6 @@ const root = new Vue({
     data: {
         currentContact: 0,
         textMessage: '',
-        newMessage: {
-            date: '99/99/9999 99:99:99',
-            text: ' ',
-            status: 'received'
-        },
         user: {
             name: 'Matteo Filippni',
             avatar: '_io'
@@ -108,9 +103,15 @@ const root = new Vue({
             return this.contacts[this.currentContact].messages[indexMes].status === 'received';
         },
         // INVIO DI UN MESSAGGIO
-        sentMessage() {
-            this.newMessage.text = this.textMessage;
-            this.contacts[this.currentContact].messages.push(this.newMessage);
+        sendMessage() {
+            if (!this.textMessage) return;
+            const newMessage = {
+                date: '99/99/9999 99:99:99',
+                text: this.textMessage,
+                status: 'received'
+            };
+
+            this.contacts[this.currentContact].messages.push(newMessage);
             this.textMessage = ''
         }
     }
