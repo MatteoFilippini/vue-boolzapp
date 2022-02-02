@@ -1,3 +1,5 @@
+dayjs.extend(dayjs_plugin_customParseFormat)
+
 const root = new Vue({
     el: '#root',
     data: {
@@ -105,14 +107,21 @@ const root = new Vue({
         // INVIO DI UN MESSAGGIO
         sendMessage() {
             if (!this.textMessage) return;
-            const newMessage = {
-                date: '99/99/9999 99:99:99',
-                text: this.textMessage,
-                status: 'received'
-            };
-
-            this.contacts[this.currentContact].messages.push(newMessage);
+            this.addMessage(this.textMessage, 'received');
             this.textMessage = ''
+            setTimeout(function () {
+
+            }, 3000)
+        },
+
+        addMessage(text, status) {
+            const newMessage = {
+                date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                // date: '9',
+                text,
+                status
+            };
+            this.contacts[this.currentContact].messages.push(newMessage);
         }
     }
 })
