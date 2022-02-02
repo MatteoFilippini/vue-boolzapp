@@ -6,6 +6,7 @@ const root = new Vue({
         currentContact: 0,
         textMessage: '',
         searchText: '',
+        menu: false,
         user: {
             name: 'Matteo Filippni',
             avatar: '_io'
@@ -134,10 +135,11 @@ const root = new Vue({
                 }
             });
             return result;
+        },
+        // CANCELLA MESSAGGIO
+        deleteMessage(indexMes) {
+            this.contacts[this.currentContact].messages.splice(indexMes, 1)
         }
     }
 })
 
-
-
-// :class="{active: index===currentContact}"

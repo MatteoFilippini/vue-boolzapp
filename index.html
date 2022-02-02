@@ -68,7 +68,8 @@
                     </section>
                     <section class="user-menu flex-grow-1 flex-column align-items-start p-0 overflow-auto">
                         <div class="image w-100 contatto p-2" v-for='(contact,index) in contacts'
-                            @click=currentChat(index) :class="{false: contacts[index].visible===false}">
+                            @click=currentChat(index)
+                            :class="{active: index===currentContact,false: contacts[index].visible===false}">
                             <figure class="m-0">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" class="user-image">
                             </figure>
@@ -100,9 +101,19 @@
                     <section class="d-flex flex-column flex-grow-1 overflow-auto p-3 message-container">
                         <div class="message shadow" v-for='(message,indexMes) in contacts[currentContact].messages'
                             :class="{sent: isSent(indexMes)}">
-                            <p class="m-0">
+                            <div class="mt-2 d-flex justify-content-between align-items-center">
                                 {{message.text}}
-                            </p>
+                                <i class="fas fa-chevron-down ms-1 color-icons" role="button">
+                                </i>
+                                <div class="canc-icon shadow">
+                                    <p>
+                                        Info
+                                    </p>
+                                    <p @click="deleteMessage(indexMes)">
+                                        Cancella
+                                    </p>
+                                </div>
+                            </div>
                             <time class="text-muted">
                                 <small>{{message.date}}</small>
                             </time>

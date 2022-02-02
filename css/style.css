@@ -81,6 +81,7 @@ main{
     height: auto;
     padding: 0 10px;
     background-color: white;  
+    position: relative;
 }
 
 .message small{
@@ -93,6 +94,31 @@ main{
     align-self: flex-end;
 }
 
+
+.canc-icon{
+    background-color: white;
+    height: 80px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    /* padding: 10px; */
+    /* display: none; */
+}
+
+.attiva{
+    display: block;
+}
+
+.canc-icon p{
+    height: 50%;
+    margin: 3px 0;
+    padding: 10px;
+}
+
+.canc-icon p:hover{
+    background-color: lightgray;
+}
 
 
 
