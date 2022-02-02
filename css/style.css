@@ -54,6 +54,14 @@ main{
     color: rgb(83,189,235);
 }
 
+/* CONTATTI */
+.active{
+    background-color: lightgray;
+}
+
+.false{
+    display: none;
+}
 
 /* CHAT */
  .chat{
@@ -86,9 +94,7 @@ main{
 }
 
 
-.active{
-    background-color: lightgray;
-}
+
 
 
 
