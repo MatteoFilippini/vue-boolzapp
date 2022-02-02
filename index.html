@@ -101,7 +101,7 @@
                     <section class="d-flex flex-column flex-grow-1 overflow-auto p-3 message-container">
                         <div class="message shadow" v-for='(message,indexMes) in contacts[currentContact].messages'
                             :class="{sent: isSent(indexMes)}">
-                            <div class="mt-2 d-flex justify-content-between align-items-center">
+                            <!-- <div class="mt-2 d-flex justify-content-between align-items-center">
                                 {{message.text}}
                                 <i class="fas fa-chevron-down ms-1 color-icons" role="button">
                                 </i>
@@ -113,6 +113,18 @@
                                         Cancella
                                     </p>
                                 </div>
+                            </div> -->
+                            <div class="dropdown mt-2 d-flex justify-content-between align-items-center">
+                                {{message.text}}
+                                <i class="fas fa-chevron-down ms-1 color-icons " role="button"></i>
+                                <button class="dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown">
+                                </button>
+                                <ul class=" dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
                             </div>
                             <time class="text-muted">
                                 <small>{{message.date}}</small>
@@ -129,7 +141,9 @@
         </main>
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 
