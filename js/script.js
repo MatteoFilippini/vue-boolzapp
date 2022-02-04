@@ -124,16 +124,11 @@ const root = new Vue({
             this.contacts[this.currentContact].messages.push(newMessage);
         },
         // CERCA CONTATTTO
-        search() {
-            const result = this.contacts.filter((contact) => {
+        searchContacts() {
+            this.contacts.filter((contact) => {
                 const lowerName = contact.name.toLowerCase();
-                if (lowerName.includes(this.searchText.toLowerCase())) {
-                    return contact.visible = true;
-                } else {
-                    return contact.visible = false;
-                }
+                contact.visible = lowerName.includes(this.searchText.toLowerCase());
             });
-            return result;
         },
         // CANCELLA MESSAGGIO
         deleteMessage(indexMes) {
