@@ -6,7 +6,6 @@ const root = new Vue({
         currentContact: 0,
         textMessage: '',
         searchText: '',
-        menu: false,
         user: {
             name: 'Matteo Filippni',
             avatar: '_io'
@@ -128,7 +127,7 @@ const root = new Vue({
         search() {
             const result = this.contacts.filter((contact) => {
                 const lowerName = contact.name.toLowerCase();
-                if (lowerName.includes(this.searchText)) {
+                if (lowerName.includes(this.searchText.toLowerCase())) {
                     return contact.visible = true;
                 } else {
                     return contact.visible = false;
